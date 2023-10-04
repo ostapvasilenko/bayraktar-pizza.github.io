@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width,initial-scale=1">
+   <title>Bayraktar Pizza</title>
+   <link href="https://fonts.googleapis.com/css?family=Rubik+Mono+One:regular" rel="stylesheet">
+   <link
+      href="https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic"
+      rel="stylesheet">
+   <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic"
+      rel="stylesheet">
+   <link rel="stylesheet" href="css/style.min.css">
+   <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png">
+</head>
+
+<body>
+   <section class="top__menu">
+      <div class="container">
+         <div class="row">
+            <div class="col-12 d-flex align-items-center justify-content-between">
+
+               <div class="col-4 col-sm-5 col-md-4 col-lg-10">
+                  <div class="menu__left">
+                     <div class="menu__location">
+                        <a href="#">
+                           <img src="./img/top-menu/location.svg" alt="location">
+                           м. Борислав, вул. Дрогобицька 7, ТЦ Олімп
+                        </a>
+                     </div>
+                     <div class="menu__time">
+                        <div class="time__img">
+                           <img src="./img/top-menu/time.svg" alt="time">
+                        </div>
+                        <p>Час роботи піцерії</p>
+                        <img src="./img/top-menu/drop-arrow.svg" alt="arrow">
+                     </div>
+                     <div class="menu__phone">
+                        <a href="tel: +380 99 999 99 99">
+                           <img src="./img/top-menu/phone.svg" alt="phone">
+                           +380 99 999 99 99
+                        </a>
+                     </div>
+                  </div>
+
+                  <div class="mobile__menu">
+
+                     <ul class="burger__menu" style="background-image: url(./img/header/mobile_bg.png);">
+
+                        <li>
+                           <a href="#about">Про нас</a>
+                        </li>
+                        <li>
+                           <a href="#info">Контакти</a>
+                        </li>
+                        <li>
+                           <a href="#footer">Доставка</a>
+                        </li>
+                        <li>
+                           <a href="#menu">Меню</a>
+                        </li>
+                        <li>
+                           <a href="tel: +380 99 999 99 99">
+                              +380 99 999 99 99
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#">
+                              Час роботи піцерії
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#">
+                              м. Борислав, вул. Дрогобицька 7, ТЦ Олімп
+                           </a>
+                        </li>
+                     </ul>
+                     <div class="burger">
+                        <span></span>
+                     </div>
+
+                  </div>
+
+               </div>
+
+
+               <div class="mobile__logo col-4 col-sm-2 col-md-4">
+                  <img src="./img/header/header-logo.png" alt="logo">
+               </div>
+               <div class="col-4 col-sm-5 col-md-4 col-lg-2">
+                  <div class="menu__right">
+
+                     <div id="favModal" class="fav__modal">
+                        <div class="fav__container">
+                           <div class="fav__content">
+                              <h2>Улюблені:</h2>
+
+                              <div class="container">
+                                 <div class="row">
+                                    <div class="favs__container">
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <button class="close__favourite">
+                              <img src="./img/top-menu/btnClose.svg" alt="close">
+                           </button>
+                        </div>
+                     </div>
+
+                     <button id="favOpen" class="menu__favourite">
+                        <img src="./img/top-menu/heart-icon.svg" alt="favourite">
+                        <div class="favourite__amount">0</div>
+                     </button>
+
+
+
+                     <div class="menu__border"></div>
+
+
+
+                     <div id="cartModal" class="cart__modal">
+                        <div class="cart__container">
+                           <div class="cart__content">
+                              <h2>Ваше замовлення:</h2>
+                              <div class="pizza__container">
+                              </div>
+
+
+                              <div class="info__additional">
+                                 <div class="additional__sauce">
+                                    <h3>cоуси</h3>
+                                    <form class="sauce__choose">
+                                       <fieldset>
+                                          <div class="adds__obj" data-id="barbecue">
+                                             <input class="adds_check" type="checkbox" id="barbecue" name="barbecue">
+                                             <label for="barbecue">Соус барбекю 19 <span>грн</span></label>
+                                             <div class="pizza__counter">
+                                                <div class="price__control" data-action="minus">-</div>
+                                                <div class="price__current" data-counter>1</div>
+                                                <div class="price__control" data-action="plus">+</div>
+                                             </div>
+                                          </div>
+                                       </fieldset>
+
+                                       <fieldset>
+                                          <div class="adds__obj" data-id="cheesy">
+                                             <input class="adds_check" type="checkbox" id="cheesy" name="cheesy">
+                                             <label for="cheesy">Соус сирний 29 <span>грн</span></label>
+                                             <div class="pizza__counter">
+                                                <div class="price__control" data-action="minus">-</div>
+                                                <div class="price__current" data-counter>1</div>
+                                                <div class="price__control" data-action="plus">+</div>
+                                             </div>
+                                          </div>
+                                       </fieldset>
+
+                                    </form>
+                                 </div>
+                                 <div class="additional__drink">
+                                    <h3>напої</h3>
+                                    <form class="drink__choose">
+                                       <fieldset>
+                                          <div class="adds__obj" data-id="cola">
+                                             <input class="adds_check" type="checkbox" id="cola" name="coca-cola">
+                                             <label for="cola">Coca Cola Zero 0.5 20 <span>грн</span></label>
+                                             <div class="pizza__counter">
+                                                <div class="price__control" data-action="minus">-</div>
+                                                <div class="price__current" data-counter>1</div>
+                                                <div class="price__control" data-action="plus">+</div>
+                                             </div>
+                                          </div>
+                                       </fieldset>
+
+                                       <fieldset>
+                                          <div class="adds__obj" data-id="pepsi">
+                                             <input class="adds_check" type="checkbox" id="pepsi" name="pepsi">
+                                             <label for="pepsi">Pepsi 0.33 18 <span>грн</span></label>
+                                             <div class="pizza__counter">
+                                                <div class="price__control" data-action="minus">-</div>
+                                                <div class="price__current" data-counter>1</div>
+                                                <div class="price__control" data-action="plus">+</div>
+                                             </div>
+                                          </div>
+                                       </fieldset>
+
+                                       <fieldset>
+                                          <div class="adds__obj" data-id="sprite">
+                                             <input class="adds_check" type="checkbox" id="sprite" name="cheesy">
+                                             <label for="sprite">Sprite 0.5 18 <span>грн</span></label>
+                                             <div class="pizza__counter">
+                                                <div class="price__control" data-action="minus">-</div>
+                                                <div class="price__current" data-counter>1</div>
+                                                <div class="price__control" data-action="plus">+</div>
+                                             </div>
+                                          </div>
+                                       </fieldset>
+
+                                    </form>
+                                 </div>
+                              </div>
+
+                              <form>
+
+                                 <fieldset class="form__name">
+                                    <label class="name__label" for="fname">Ім'я</label><br>
+                                    <input type="text" id="fname" name="fname" autocomplete="off"
+                                       placeholder="Ваше ім'я">
+                                 </fieldset>
+
+                                 <fieldset class="form__tel">
+                                    <label class="name__label" for="phone">Номер телефону</label><br>
+                                    <input type="tel" id="phone" name="phone" autocomplete="off"
+                                       placeholder="your phone"
+                                       pattern="[0-9+]{3} [0-9()]{5} [0-9]{2}-[0-9]{2}-[0-9]{3}" required> <br>
+                                 </fieldset>
+
+                                 <fieldset class="delivery">
+                                    <h3 class="delivery__title">Доставка</h3>
+
+                                    <div class="delivery__byself">
+                                       <input type="radio" id="byself" name="delivery" class="form-check-input">
+                                       <label for="byself">Забрати амостійно</label><br>
+                                    </div>
+
+                                    <div class="delivery__courier">
+                                       <input type="radio" id="courier" name="delivery" class="form-check-input">
+                                       <label for="courier">Доставка кур’єром на вказану адресу</label><br>
+                                    </div>
+                                 </fieldset>
+
+                                 <fieldset class="payment">
+                                    <h3 class="payment__title">Оплата</h3>
+
+                                    <div class="payment__cash">
+                                       <input type="radio" id="cash" name="payment" class="form-check-input">
+                                       <label for="cash">Оплата готівкою при отриманні замовлення</label><br>
+                                    </div>
+
+                                    <div class="payment__bank">
+                                       <input type="radio" id="bank" name="payment" class="form-check-input">
+                                       <label for="bank">Оплата картою кур’єру через термінал</label><br>
+                                    </div>
+                                 </fieldset>
+
+                                 <fieldset class="address">
+                                    <h3 class="address__title">Адреса</h3>
+                                    <input type="text" id="address" autocomplete="off"
+                                       placeholder="Назва вулиці та номер будинку">
+                                 </fieldset>
+
+                                 <fieldset class="comment">
+                                    <h3 class="comment__title">Ваш коментар</h3>
+                                    <textarea name="comment" id="textComment" cols="100%" rows="10"></textarea>
+                                 </fieldset>
+
+                                 <div class="total__order">
+                                    <p data-cart-delivery class="none">
+                                       <span class="total__title">Доставка:</span>
+                                       <span class="total__delivery">50 грн</span><br>
+                                    </p>
+                                    <p>
+                                       <span class="total__title">До сплати:</span>
+                                       <span class="total__price">175 грн</span>
+                                    </p>
+                                 </div>
+
+                                 <fieldset class="order__submit">
+                                    <button id="order__pizza" type="submit">
+                                       Замовити
+                                    </button>
+                                 </fieldset>
+
+                              </form>
+
+                           </div>
+
+                           <button class="close__cart">
+                              <img src="./img/top-menu/btnClose.svg" alt="close">
+                           </button>
+                        </div>
+                     </div>
+
+                     <button id="cartOpen" class="menu__basket">
+                        <img src="./img/top-menu/basket-icon.svg" alt="basket">
+                        <div class="basket__amount">0</div>
+                     </button>
+                     <div class="count__price"><span>0</span> грн</div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <header class="header" style="background-image: url(./img/header/header-bg.png);">
+      <div class="container">
+         <div class="row">
+            <div class="col-12">
+               <div class="header__top d-flex align-items-center">
+                  <div class="col-2">
+                     <div class="header__logo">
+                        <a href="#">
+                           <img src="./img/header/header-logo.png" alt="logo">
+                        </a>
+                     </div>
+                  </div>
+                  <div class="col-10">
+                     <nav class="header__menu">
+                        <ul>
+                           <li>
+                              <a href="#about">Про нас</a>
+                           </li>
+                           <li>
+                              <a href="#info">Контакти</a>
+                           </li>
+                           <li>
+                              <a href="#footer">Доставка</a>
+                           </li>
+                           <li>
+                              <a href="#menu">Меню</a>
+                           </li>
+                        </ul>
+                     </nav>
+                  </div>
+               </div>
+            </div>
+            <div class="col-12">
+               <div class="header__bottom">
+                  <div class="header__item">
+                     <img src="./img/header/header-bayraktar.png" alt="bayraktar">
+                  </div>
+                  <div class="header__title">
+                     <h1>Піца високого польоту</h1>
+                  </div>
+                  <div class="header__btn">
+                     <button id="button">Замовити</button>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </header>
+   <section id="menu" class="our__pizza">
+      <div class="pizza__title">
+         <h2>НАША ПІЦЦА:</h2>
+      </div>
+
+      <div class="container">
+         <div class="row">
+            <div class="col-12 col-xl-4 col-lg-4 col-md-6 col-sm-12 mb-4">
+               <div class="pizza__card" data-id="01">
+                  <div class="pizza__items">
+                     <img src="./img/our-pizza/himars.png" alt="pizza">
+                     <div class="info__top">
+                        <div class="pizza__info">
+                           <p class="pizza__weight">530 г</p>
+                           <p class="pizza__size">30 см</p>
+                        </div>
+                        <button class="pizza__favourite">
+                           <img src="./img/our-pizza/red-favourite.svg" alt="like">
+                        </button>
+                     </div>
+                     <div class="card__title">
+                        <h3>Хаймарс</h3>
+                     </div>
+                     <div class="items__hover">
+                        <h3 class="title__hover">Хаймарс</h3>
+                        <p class="describe__hover">Перетерті томати, моцарела, пікантні баклажани, мариновані за
+                           домашнім
+                           італійським рецептом, пікантна салямі пепероні та пармезан. Алергени: злаки, лактоза.
+                        </p>
+                     </div>
+                  </div>
+                  <div class="pizza__buy">
+                     <div class="pizza__counter">
+                        <div class="items__control" data-action="minus">-</div>
+                        <div class="items__current" data-counter>1</div>
+                        <div class="items__control" data-action="plus">+</div>
+                     </div>
+                     <button data-cart type="button" class="buy__btn">
+                        в корзину
+                     </button>
+                     <div class="pizza__price">
+                        <p>225 грн</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <div class="col-12 col-xl-4 col-lg-4 col-md-6 col-sm-12 mb-4">
+               <div class="pizza__card" data-id="02">
+                  <div class="pizza__items">
+                     <img src="./img/our-pizza/peach.png" alt="pizza">
+                     <div class="info__top">
+                        <div class="pizza__info">
+                           <p class="pizza__weight">530 г</p>
+                           <p class="pizza__size">30 см</p>
+                        </div>
+                        <button class="pizza__favourite">
+                           <img src="./img/our-pizza/red-favourite.svg" alt="like">
+                        </button>
+                     </div>
+                     <div class="card__title">
+                        <h3>Персикова</h3>
+                     </div>
+                     <div class="items__hover">
+                        <h3 class="title__hover">Персикова</h3>
+                        <p class="describe__hover">Перетерті томати, моцарела, пікантні баклажани, мариновані за
+                           домашнім
+                           італійським рецептом, пікантна салямі пепероні та пармезан. Алергени: злаки, лактоза.
+                        </p>
+                     </div>
+                  </div>
+                  <div class="pizza__buy">
+                     <div class="pizza__counter">
+                        <div class="items__control" data-action="minus">-</div>
+                        <div class="items__current" data-counter>1</div>
+                        <div class="items__control" data-action="plus">+</div>
+                     </div>
+                     <button data-cart type="button" class="buy__btn">
+                        в корзину
+                     </button>
+                     <div class="pizza__price">
+                        <p>175 грн</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <div class="col-12 col-xl-4 col-lg-4 col-md-6 col-sm-12 mb-4">
+               <div class="pizza__card" data-id="03">
+                  <div class="pizza__items">
+                     <img src="./img/our-pizza/stefania.png" alt="pizza">
+                     <div class="info__top">
+                        <div class="pizza__info">
+                           <p class="pizza__weight">530 г</p>
+                           <p class="pizza__size">30 см</p>
+                        </div>
+                        <button class="pizza__favourite">
+                           <img src="./img/our-pizza/red-favourite.svg" alt="like">
+                        </button>
+                     </div>
+                     <div class="card__title">
+                        <h3>Стефанія</h3>
+                     </div>
+                     <div class="items__hover">
+                        <h3 class="title__hover">Стефанія</h3>
+                        <p class="describe__hover">Перетерті томати, моцарела, пікантні баклажани, мариновані за
+                           домашнім
+                           італійським рецептом, пікантна салямі пепероні та пармезан. Алергени: злаки, лактоза.
+                        </p>
+                     </div>
+                  </div>
+                  <div class="pizza__buy">
+                     <div class="pizza__counter">
+                        <div class="items__control" data-action="minus">-</div>
+                        <div class="items__current" data-counter>1</div>
+                        <div class="items__control" data-action="plus">+</div>
+                     </div>
+                     <button data-cart type="button" class="buy__btn">
+                        в корзину
+                     </button>
+                     <div class="pizza__price">
+                        <p>125 грн</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <div class="col-12 col-xl-4 col-lg-4 col-md-6 col-sm-12 mb-4">
+               <div class="pizza__card" data-id="04">
+                  <div class="pizza__items">
+                     <img src="./img/our-pizza/margarita.png" alt="pizza">
+                     <div class="info__top">
+                        <div class="pizza__info">
+                           <p class="pizza__weight">530 г</p>
+                           <p class="pizza__size">30 см</p>
+                        </div>
+                        <button class="pizza__favourite">
+                           <img src="./img/our-pizza/red-favourite.svg" alt="like">
+                        </button>
+                     </div>
+                     <div class="card__title">
+                        <h3>Маргарита</h3>
+                     </div>
+                     <div class="items__hover">
+                        <h3 class="title__hover">Маргарита</h3>
+                        <p class="describe__hover">Перетерті томати, моцарела, пікантні баклажани, мариновані за
+                           домашнім
+                           італійським рецептом, пікантна салямі пепероні та пармезан. Алергени: злаки, лактоза.
+                        </p>
+                     </div>
+                  </div>
+                  <div class="pizza__buy">
+                     <div class="pizza__counter">
+                        <div class="items__control" data-action="minus">-</div>
+                        <div class="items__current" data-counter>1</div>
+                        <div class="items__control" data-action="plus">+</div>
+                     </div>
+                     <button data-cart type="button" class="buy__btn">
+                        в корзину
+                     </button>
+                     <div class="pizza__price">
+                        <p>235 грн</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <div class="col-12 col-xl-4 col-lg-4 col-md-6 col-sm-12 mb-4">
+               <div class="pizza__card" data-id="05">
+                  <div class="pizza__items">
+                     <img src="./img/our-pizza/mexicana.png" alt="pizza">
+                     <div class="info__top">
+                        <div class="pizza__info">
+                           <p class="pizza__weight">530 г</p>
+                           <p class="pizza__size">30 см</p>
+                        </div>
+                        <button class="pizza__favourite">
+                           <img src="./img/our-pizza/red-favourite.svg" alt="like">
+                        </button>
+                     </div>
+                     <div class="card__title">
+                        <h3>Мексиканська</h3>
+                     </div>
+                     <div class="items__hover">
+                        <h3 class="title__hover">Мексиканська</h3>
+                        <p class="describe__hover">Перетерті томати, моцарела, пікантні баклажани, мариновані за
+                           домашнім
+                           італійським рецептом, пікантна салямі пепероні та пармезан. Алергени: злаки, лактоза.
+                        </p>
+                     </div>
+                  </div>
+                  <div class="pizza__buy">
+                     <div class="pizza__counter">
+                        <div class="items__control" data-action="minus">-</div>
+                        <div class="items__current" data-counter>1</div>
+                        <div class="items__control" data-action="plus">+</div>
+                     </div>
+                     <button data-cart type="button" class="buy__btn">
+                        в корзину
+                     </button>
+                     <div class="pizza__price">
+                        <p>225 грн</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <div class="col-12 col-xl-4 col-lg-4 col-md-6 col-sm-12 mb-4">
+               <div class="pizza__card" data-id="06">
+                  <div class="pizza__items">
+                     <img src="./img/our-pizza/spinach.png" alt="pizza">
+                     <div class="info__top">
+                        <div class="pizza__info">
+                           <p class="pizza__weight">530 г</p>
+                           <p class="pizza__size">30 см</p>
+                        </div>
+                        <button class="pizza__favourite">
+                           <img src="./img/our-pizza/red-favourite.svg" alt="like">
+                        </button>
+                     </div>
+                     <div class="card__title">
+                        <h3>Шпинатна</h3>
+                     </div>
+                     <div class="items__hover">
+                        <h3 class="title__hover">Шпинатна</h3>
+                        <p class="describe__hover">Перетерті томати, моцарела, пікантні баклажани, мариновані за
+                           домашнім
+                           італійським рецептом, пікантна салямі пепероні та пармезан. Алергени: злаки, лактоза.
+                        </p>
+                     </div>
+                  </div>
+                  <div class="pizza__buy">
+                     <div class="pizza__counter">
+                        <div class="items__control" data-action="minus">-</div>
+                        <div class="items__current" data-counter>1</div>
+                        <div class="items__control" data-action="plus">+</div>
+                     </div>
+                     <button data-cart type="button" class="buy__btn">
+                        в корзину
+                     </button>
+                     <div class="pizza__price">
+                        <p>180 грн</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <div class="col-12 col-xl-4 col-lg-4 col-md-6 col-sm-12 mb-4">
+               <div class="pizza__card" data-id="07">
+                  <div class="pizza__items">
+                     <img src="./img/our-pizza/hawai.png" alt="pizza">
+                     <div class="info__top">
+                        <div class="pizza__info">
+                           <p class="pizza__weight">530 г</p>
+                           <p class="pizza__size">30 см</p>
+                        </div>
+                        <button class="pizza__favourite">
+                           <img src="./img/our-pizza/red-favourite.svg" alt="like">
+                        </button>
+                     </div>
+                     <div class="card__title">
+                        <h3>Гаваї</h3>
+                     </div>
+                     <div class="items__hover">
+                        <h3 class="title__hover">Гаваї</h3>
+                        <p class="describe__hover">Перетерті томати, моцарела, пікантні баклажани, мариновані за
+                           домашнім
+                           італійським рецептом, пікантна салямі пепероні та пармезан. Алергени: злаки, лактоза.
+                        </p>
+                     </div>
+                  </div>
+                  <div class="pizza__buy">
+                     <div class="pizza__counter">
+                        <div class="items__control" data-action="minus">-</div>
+                        <div class="items__current" data-counter>1</div>
+                        <div class="items__control" data-action="plus">+</div>
+                     </div>
+                     <button data-cart type="button" class="buy__btn">
+                        в корзину
+                     </button>
+                     <div class="pizza__price">
+                        <p>140 грн</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <div class="col-12 col-xl-4 col-lg-4 col-md-6 col-sm-12 mb-4">
+               <div class="pizza__card" data-id="08">
+                  <div class="pizza__items">
+                     <img src="./img/our-pizza/javelina.png" alt="pizza">
+                     <div class="info__top">
+                        <div class="pizza__info">
+                           <p class="pizza__weight">530 г</p>
+                           <p class="pizza__size">30 см</p>
+                        </div>
+                        <button class="pizza__favourite">
+                           <img src="./img/our-pizza/red-favourite.svg" alt="like">
+                        </button>
+                     </div>
+                     <div class="card__title">
+                        <h3>Джавеліна</h3>
+                     </div>
+                     <div class="items__hover">
+                        <h3 class="title__hover">Джавеліна</h3>
+                        <p class="describe__hover">Перетерті томати, моцарела, пікантні баклажани, мариновані за
+                           домашнім
+                           італійським рецептом, пікантна салямі пепероні та пармезан. Алергени: злаки, лактоза.
+                        </p>
+                     </div>
+                  </div>
+                  <div class="pizza__buy">
+                     <div class="pizza__counter">
+                        <div class="items__control" data-action="minus">-</div>
+                        <div class="items__current" data-counter>1</div>
+                        <div class="items__control" data-action="plus">+</div>
+                     </div>
+                     <button data-cart type="button" class="buy__btn">
+                        в корзину
+                     </button>
+                     <div class="pizza__price">
+                        <p>265 грн</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <div class="col-12 col-xl-4 col-lg-4 col-md-6 col-sm-12 mb-4">
+               <div class="pizza__card" data-id="09">
+                  <div class="pizza__items">
+                     <img src="./img/our-pizza/bayraktar.png" alt="pizza">
+                     <div class="info__top">
+                        <div class="pizza__info">
+                           <p class="pizza__weight">530 г</p>
+                           <p class="pizza__size">30 см</p>
+                        </div>
+                        <button class="pizza__favourite">
+                           <img src="./img/our-pizza/red-favourite.svg" alt="like">
+                        </button>
+                     </div>
+                     <div class="card__title">
+                        <h3>Байрактар</h3>
+                     </div>
+                     <div class="items__hover">
+                        <h3 class="title__hover">Байрактар</h3>
+                        <p class="describe__hover">Перетерті томати, моцарела, пікантні баклажани, мариновані за
+                           домашнім
+                           італійським рецептом, пікантна салямі пепероні та пармезан. Алергени: злаки, лактоза.
+                        </p>
+                     </div>
+                  </div>
+                  <div class="pizza__buy">
+                     <div class="pizza__counter">
+                        <div class="items__control" data-action="minus">-</div>
+                        <div class="items__current" data-counter>1</div>
+                        <div class="items__control" data-action="plus">+</div>
+                     </div>
+                     <button data-cart type="button" class="buy__btn">
+                        в корзину
+                     </button>
+                     <div class="pizza__price">
+                        <p>225 грн</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <section id="info" class="info">
+      <div class="info__map">
+         <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2602.1217686515793!2d23.418343599999996!3d49.29303639999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473a4a475a0c992b%3A0xf0b8bebeacfd461!2z0J7Qu9GW0LzQvw!5e0!3m2!1suk!2sua!4v1678439637635!5m2!1suk!2sua"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <div class="container">
+         <div class="row">
+            <div class="col-12">
+               <div class="info__content">
+                  <div class="info__content_title">
+                     <h2>ПІЦА ВИСОКОГО ПОЛЬОТУ</h2>
+                  </div>
+                  <div class="info__content_items">
+                     <div class="items__contact">
+                        <h2>КОНТАКТИ:</h2>
+                        <a href="tel:+38068 665-51-31">
+                           068 665-51-31
+                        </a>
+                     </div>
+                     <div class="items__time">
+                        <h2>ЧАС РОБОТИ:</h2>
+                        <p>10:30-21:45</p>
+                     </div>
+                     <div class="item__adress">
+                        <h2>АДРЕСА САМОВИВОЗУ:</h2>
+                        <div class="item__adres_container">
+                           <a href="https://www.google.com/maps/dir//%D0%9E%D0%BB%D1%96%D0%BC%D0%BF+%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F+%D0%94%D1%80%D0%BE%D0%B3%D0%BE%D0%B1%D0%B8%D1%86%D1%8C%D0%BA%D0%B0+%D0%91%D0%BE%D1%80%D0%B8%D1%81%D0%BB%D0%B0%D0%B2,+%D0%9B%D1%8C%D0%B2%D1%96%D0%B2%D1%81%D1%8C%D0%BA%D0%B0+%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C+82300/@49.2934629,23.4200728,16z/data=!4m8!4m7!1m0!1m5!1m1!1s0x473a4a475a0c992b:0xf0b8bebeacfd461!2m2!1d23.4200728!2d49.2934629"
+                              target="_blank">м. Борислав, вул. Дрогобицька 7, ТЦ Олімп</a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <section id="about" class="about-us">
+      <div class="container">
+         <div class="row align-items-center">
+            <div class="col-12 d-flex justify-content-center col-lg-4">
+               <div class="about-us__content">
+                  <div class="about-us__content_title">
+                     <h2>БІЛЬШЕ ПРО НАС</h2>
+                  </div>
+                  <div class="about-us__content_descript">
+                     <p>Заклад громадського харчування, що спеціалізується на приготуванні піци. Кухар, який
+                        виготовляє піцу, називається піцайоло. </p>
+                  </div>
+               </div>
+            </div>
+            <div class="col-12 col-lg-8">
+               <div class="swiper mySwiper">
+                  <div class="swiper-wrapper">
+                     <div class="swiper-slide">
+                        <img src="./img/about/slide1.png" alt="slide">
+                     </div>
+                     <div class="swiper-slide">
+                        <img src="./img/about/slide2.png" alt="slide">
+                     </div>
+                     <div class="swiper-slide">
+                        <img src="./img/about/slide3.png" alt="slide">
+                     </div>
+                     <div class="swiper-slide">
+                        <img src="./img/about/slide1.png" alt="slide">
+                     </div>
+                     <div class="swiper-slide">
+                        <img src="./img/about/slide2.png" alt="slide">
+                     </div>
+                  </div>
+                  <div class="swiper-pagination"></div>
+                  <div class="swiper-button-next">
+                     <img src="./img/about/ArrowRight.svg" alt="arrow">
+                  </div>
+                  <div class="swiper-button-prev">
+                     <img src="./img/about/ArrowLeft.svg" alt="arrow">
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+   </section>
+   <section id="footer" class="footer">
+      <div class="container">
+         <div class="row">
+            <div class="col-12 col-xl-3 col-lg-3 col-md-12">
+               <div class="footer__logo">
+                  <a href="#">
+                     <img src="./img/footer/Logo.png" alt="Logo">
+                  </a>
+               </div>
+            </div>
+            <div class="col-12 col-xl-3 col-lg-3 col-md-4 col-sm-6">
+               <div class="footer__choose">
+                  <h2>ОБИРАЙ</h2>
+                  <ul>
+                     <li><a href="#">Доставка</a></li>
+                     <li><a href="#">Контакти</a></li>
+                     <li><a href="#">Про нас</a></li>
+                  </ul>
+               </div>
+            </div>
+            <div class="col-12 col-xl-3 col-lg-3 col-md-4 col-sm-6">
+               <div class="footer__contact">
+                  <h2>КОНТАКТИ</h2>
+                  <a href="tel:+38(068) 665-51-31">+38(068) 665-51-31</a>
+               </div>
+               <div class="footer__workTime">
+                  <h2>ЧАС РОБОТИ</h2>
+                  <p>10:30 - 21:45</p>
+               </div>
+            </div>
+            <div class="col-12 col-xl-3 col-lg-3 col-md-4 col-sm-12">
+               <div class="footer__subscribe">
+                  <h2>ПІДПИШИСЬ</h2>
+                  <div class="subscribe__link">
+                     <a href="#" target="_blank"><img src="./img/footer/instagram.svg" alt="instagram"></a>
+                     <a href="#" target="_blank"><img src="./img/footer/faceboock.svg" alt="faceboock"></a>
+                  </div>
+               </div>
+            </div>
+            <div class="footer__copyright">
+               <p>2023, RED</p>
+            </div>
+         </div>
+      </div>
+   </section>
+   <div style="display: none!important;">
+      <!-- <svg id="icon-location" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"> -->
+      <!-- <path -->
+      <!-- d="M10 1.25C8.1773 1.25215 6.42987 1.97717 5.14102 3.26602C3.85218 4.55486 3.12716 6.3023 3.12501 8.125C3.12282 9.61452 3.60937 11.0636 4.51001 12.25C4.51001 12.25 4.69751 12.4969 4.72813 12.5325L10 18.75L15.2744 12.5294C15.3019 12.4963 15.49 12.25 15.49 12.25L15.4906 12.2481C16.3908 11.0623 16.8771 9.61383 16.875 8.125C16.8729 6.3023 16.1478 4.55486 14.859 3.26602C13.5701 1.97717 11.8227 1.25215 10 1.25V1.25ZM10 10.625C9.50555 10.625 9.02221 10.4784 8.61108 10.2037C8.19996 9.92897 7.87953 9.53852 7.69031 9.08171C7.50109 8.62489 7.45158 8.12223 7.54804 7.63727C7.64451 7.15232 7.88261 6.70686 8.23224 6.35723C8.58187 6.0076 9.02733 5.7695 9.51228 5.67304C9.99723 5.57657 10.4999 5.62608 10.9567 5.8153C11.4135 6.00452 11.804 6.32495 12.0787 6.73607C12.3534 7.1472 12.5 7.63055 12.5 8.125C12.4992 8.78779 12.2355 9.42319 11.7669 9.89185C11.2982 10.3605 10.6628 10.6242 10 10.625V10.625Z" -->
+      <!-- fill="#FFAE9C" /> -->
+      <!-- </svg> -->
+
+
+
+  
+   </div>
+   <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+   <script src="js/swiper.js"></script>
+   <script src="js/slick.min.js"></script>
+   <script src="https://unpkg.com/imask"></script>
+   <script src="js/cart.js"></script>
+   <script src="js/data.js"></script>
+   <script src="js/script.js"></script>
+</body>
+
+</html>
